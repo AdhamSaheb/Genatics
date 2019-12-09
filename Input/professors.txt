@@ -1,0 +1,15 @@
+ML,SLP:Adnan Yahya
+Control,Electronics:Hakam Shehadeh
+Control,Electronics:Ashraf Rimawi
+AI,ML:Hanna Bullata
+Image Processing,ML,AI:Aziz Qaroush
+SLP,Android,AI:Abul soud Hanani
+AI,Android,Electronics:Khader Mohammad
+Android,Control,AR:Ahmad Afaneh
+Image Processing,Android,Big Data:Abdellatif AbuIssa
+Android,Big Data:Mohammad Hussein
+SLP,Big Data:Anas Samara
+Networks,IOT:Iyad Tumar
+Security,IOT:Abdelsalam Sayyad
+
+
