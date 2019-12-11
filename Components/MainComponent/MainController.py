@@ -1,20 +1,19 @@
-from tkinter import filedialog
 import os
-from Data import readFiles
-from Genetic.generate import generate
-from Genetic.Fitness import fitness_function
-from Models.Group import Group
 import tkinter as tk
+from tkinter import filedialog
 from tkinter import ttk
 
+from Data import readFiles
+from Genetic.generate import generate
+
 ROOT_DIR = os.path.abspath(os.curdir)
+
 import plotly.graph_objects as go
 from Genetic.crossover import *
 from Models.Group import Group
 
 import matplotlib.pyplot as plt
 import numpy as np
-import scipy.optimize as opt
 
 # Initializing 2 lists for professors and groups and solutions
 professors = []
@@ -161,70 +160,72 @@ def goBt(populationEntry):
         x_number_values.append(i)
         y_number_values.append(solutions[0].fitness)
 
-    # printing the answer
-    final_answer = solutions[0]
-    print("Final answer fitness = " , final_answer.fitness)
-    final_list = [[], [], [], [], [], [], [], [], [], [], [], [] ]
+    if solutions[0].fitness != 0:
+        # printing the answer
+        final_answer = solutions[0]
+        print("Final answer fitness = " , final_answer.fitness)
+        final_list = [[], [], [], [], [], [], [], [], [], [], [], [] ]
 
-    i = 0
-    for slot in final_answer.chromosome:
-        for entry in slot:
-            if isinstance(entry, Group):
-                st = ''
-                st += '<b>' + entry.project + '</b><br> '
-                for student in entry.students:
-                    st += student + "<br>"
-                st += "<b>Supervisor:</b><br>" + entry.supervisor + "<br>"
-                st += "<b>Examinors: </b><br>"
-                for examinor in entry.examinors:
-                    st += examinor.name + "<br>"
-                final_list[i].append(st)
-            else:
-                final_list[i].append(entry)
-        i += 1
+        i = 0
+        for slot in final_answer.chromosome:
+            for entry in slot:
+                if isinstance(entry, Group):
+                    st = ''
+                    st += '<b>' + entry.project + '</b><br> '
+                    for student in entry.students:
+                        st += student + "<br>"
+                    st += "<b>Supervisor:</b><br>" + entry.supervisor + "<br>"
+                    st += "<b>Examinors: </b><br>"
+                    for examinor in entry.examinors:
+                        st += examinor.name + "<br>"
+                    final_list[i].append(st)
+                else:
+                    final_list[i].append(entry)
+            i += 1
 
-    fig = go.Figure(data=[go.Table(columnwidth=[500, 500, 500, 500, 500, 500],
-                                   header=dict(values=['<b>9:00-10:00<b>', '<b>10:00-11:00<b>', '<b>11:00-12:00<b>',
-                                                       "<b>12:00-01:00<b>",
-                                                       '<b>01:00-02:00<b>', '<b>02:00-03:00<b>'],
-                                               line_color='darkslategray',
-                                               fill_color='lightskyblue',
-                                               height=70,
-                                               align='center'),
+        fig = go.Figure(data=[go.Table(columnwidth=[500, 500, 500, 500, 500, 500],
+                                       header=dict(values=['<b>9:00-10:00<b>', '<b>10:00-11:00<b>', '<b>11:00-12:00<b>',
+                                                           "<b>12:00-01:00<b>",
+                                                           '<b>01:00-02:00<b>', '<b>02:00-03:00<b>'],
+                                                   line_color='darkslategray',
+                                                   fill_color='lightskyblue',
+                                                   height=70,
+                                                   align='center'),
 
-                                   cells=dict(values=[final_list[0],  # 1st column
-                                                      final_list[1], final_list[2], final_list[3], final_list[4],
-                                                      final_list[5]],
-                                              line_color='darkslategray',
-                                              fill_color='lightcyan',
-                                              height=40,
-                                              align='center'))
-                          ])
+                                       cells=dict(values=[final_list[0],  # 1st column
+                                                          final_list[1], final_list[2], final_list[3], final_list[4],
+                                                          final_list[5]],
+                                                  line_color='darkslategray',
+                                                  fill_color='lightcyan',
+                                                  height=40,
+                                                  align='center'))
+                              ])
 
-    fig.update_layout(width=2500, height=2500, title="Day 1")
-    fig.show()
+        fig.update_layout(width=2500, height=2500, title="Day 1")
+        fig.show()
 
-    fig = go.Figure(data=[go.Table(columnwidth=[500, 500, 500, 500, 500, 500],
-                                   header=dict(values=['<b>9:00-10:00<b>', '<b>10:00-11:00<b>', '<b>11:00-12:00<b>',
-                                                       "<b>12:00-01:00<b>",
-                                                       '<b>01:00-02:00<b>', '<b>02:00-03:00<b>'],
-                                               line_color='darkslategray',
-                                               fill_color='lightskyblue',
-                                               height=70,
-                                               align='center'),
+        fig = go.Figure(data=[go.Table(columnwidth=[500, 500, 500, 500, 500, 500],
+                                       header=dict(values=['<b>9:00-10:00<b>', '<b>10:00-11:00<b>', '<b>11:00-12:00<b>',
+                                                           "<b>12:00-01:00<b>",
+                                                           '<b>01:00-02:00<b>', '<b>02:00-03:00<b>'],
+                                                   line_color='darkslategray',
+                                                   fill_color='lightskyblue',
+                                                   height=70,
+                                                   align='center'),
 
-                                   cells=dict(values=[final_list[6],  # 1st column
-                                                      final_list[7], final_list[8], final_list[9], final_list[10],
-                                                      final_list[11]],
-                                              line_color='darkslategray',
-                                              fill_color='lightcyan',
-                                              height=40,
-                                              align='center'))
-                          ])
+                                       cells=dict(values=[final_list[6],  # 1st column
+                                                          final_list[7], final_list[8], final_list[9], final_list[10],
+                                                          final_list[11]],
+                                                  line_color='darkslategray',
+                                                  fill_color='lightcyan',
+                                                  height=40,
+                                                  align='center'))
+                              ])
 
-    fig.update_layout(width=2500, height=2500, title="Day 2")
-    fig.show()
-
+        fig.update_layout(width=2500, height=2500, title="Day 2")
+        fig.show()
+    else:
+        print("No Valid Solution! Please try again or change population size or number of iterations")
 
 
 

@@ -24,8 +24,15 @@ def hard_fitness(solution):
             for j in range(i + 1, 5):
                 if gene[i] == 'Empty' or gene[j] == 'Empty':
                     continue
-                if len(intersection(gene[i].examinors, gene[j].examinors)) != 0:
-                    return False
+                else:
+                    if len(intersection(gene[i].examinors, gene[j].examinors)) != 0:
+                        return False
+                    if exists(gene[j].supervisor, gene[i].examinors):
+                        return False
+                    if exists(gene[i].supervisor, gene[j].examinors):
+                        return False
+                    if gene[i].supervisor == gene[j].supervisor:
+                        return False
 
     return True
 
@@ -136,11 +143,9 @@ def soft_fitness(solution):
             else:
                 grouptimedesired = 6 + int(solution.list[i].slotdesired) - 1
                 if i >= 30:
-                    score +=1
+                    score += 1
             if grouptimedesired == int(i / 5):
                 score += 1
-
-
 
     return score
 
@@ -152,18 +157,17 @@ def diff(li1, li2):
 # Python program to illustrate the intersection
 # of two lists in most simple way
 def intersection(lst1, lst2):
-    lst3 = [value for value in lst1 if value in lst2]
-    return lst3
-
-
-'''def intersection(lst1, lst2):
     lst3 = []
-    for thing in lst1:
-        for thing2 in lst2:
-            if thing==thing2 or thing.name.find(thing2.name) :
-                lst3.append("conflict")
-                break
-
-
+    for prof in lst1:
+        for proff in lst2:
+            if prof.name == proff.name:
+                if prof.name not in lst3:
+                    lst3.append(prof.name)
     return lst3
-'''
+
+
+def exists(prof, listt):
+    for item in listt:
+        if item.name == prof:
+            return True
+    return False

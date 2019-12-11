@@ -20,6 +20,7 @@ def readGroupsFile(groupsFile, groups, professors):
     for x in groupsFile:
         valideximinors = []
         examinors = []
+
         if x == '\n':
             continue
         else:

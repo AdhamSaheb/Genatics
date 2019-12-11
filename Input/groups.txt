@@ -1,14 +1,14 @@
 Adham Tamimi,Anas Yahya,Mohammad Mouadi:Open Neural Networks Library:AI,Networks:Wasel Ghanem:1:2
 Yara Naser,Nataly Aayyad,Yara AbuHammad:OpenCog Prime:Networks,Image Processing:Aziz Qaroush:2:6
-Ahmad Ibrahim,Ayham Hasheesh:Society of mind and its successor the Emotion machine:Control,Electronics:Mohammad Hussien:1:5
+Ahmad Ibrahim,Ayham Hasheesh:Society of mind and its successor the Emotion machine:Control,Electronics:Mohammad Hussein:1:5
 Nour Shaer,Heba Barakat,Haneen Qurt:Feature Extraction from App Descriptions:Andoird,AI,ML:Aziz Qaroush:1:3
 Yousef Anini,Mahmoud Salameh,Layth Mubarak:Android Malware Detection:Android,AI,ML:Ahmad Alsaadeh:1:3
 Maria Ziad,Masa Daraghmeh,Mohammad Ahmad:Sign Language Translation App:Android,AI,ML,Image Processing:Anas Samara:2:1
 Fayez Khalil,Suliman Jarour:Estimate the prices of properties:AI,ML,Image Processing:Wasel Ghanem:2:4
 Sana Badaha,Rahaf Hawamdeh,Ruba Hamad:Automatic Tajweed assessment:SLP,ML:Abul soud Hanani:2:3
 Moutasim Mudallal,Abid Awad,Muthaffar Shekllakh:Secure Certificate Management:IOT,Security,Networks:Ahmad Alsaadeh:1:1
-Mosab Samara,Yazan Abbasi,Mahmoud Zeidat:Augmented Reality Food Menu Application:AR,Android:Ahmad alsaadeh:1:5
-Shahd Muhareb,Dema Salem,Raghad Bayatneh:Internet of Things for Smart and Connected Cities:IOT,Big Data,Networks:Mohammad Hussien:2:5
+Mosab Samara,Yazan Abbasi,Mahmoud Zeidat:Augmented Reality Food Menu Application:AR,Android:Ahmad Alsaadeh:1:5
+Shahd Muhareb,Dema Salem,Raghad Bayatneh:Internet of Things for Smart and Connected Cities:IOT,Big Data,Networks:Mohammad Hussein:2:5
 Eman Mansour,Rand Sandoqah,Dema Jabr:Can you guess who I am?:Control,SLP,AI,ML:Abul soud Hanani:2:5
 Saja Ghouleh,Rand Eneem,Sael Khalouf:Mobile application to support tourism in Palestine:Android,AR:Abdellatif Abuissa:1:6
 Alaa Musleh,Tasneem Tulaib,Nour Zahran:A System for Pneumonia Detection from X-Rays:IOT,AR:Wasel Ghanem:1:2
@@ -16,7 +16,7 @@ Ahmad Daghra,Areen Faqeeh,Manar Faqeeh:BELADI:Android,Networks,AR:Ashraf Rimawi:
 Maysa Salah,Mahmoud Khdeir,Dania Ghalayeeni:Integrating Wi-Fi technologies for smart things:IOT,Networks:Wael Hashlamon:1:5
 Maha Hajjeh,Khulud Sabri,Amneh Ankoush:TRAFFIC LIGHT VIOLATIONS DETECTION SYSTEM:Image Processing,ML,AI:Mohammad Jubran:2:5
 Eman Nassar,Marah Salameh,Tasneem Ajaj:Shiftati:Android,Networks:Abdelsalam Sayyad:2:2
-Ahmad Yahya,Ehab Abdelkarim,Bader Anini:Video Summarization:Image Processing,AI:Aziz Qaroush2:5
+Ahmad Yahya,Ehab Abdelkarim,Bader Anini:Video Summarization:Image Processing,AI:Aziz Qaroush:2:5
 
 
 
